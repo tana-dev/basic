@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//Route::resource('basic', 'BasicController');
+
+Route::get('/{any}', function () {
+	    return view('app');
+})->where('any', '.*');
+
